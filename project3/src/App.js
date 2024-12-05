@@ -54,7 +54,7 @@ const App = () => {
   const [habits, setHabits] = useState([]);
 
   const addHabit = (habit) => {
-    setHabits([...habits, habit]);
+    setHabits([...habits, { ...habit, progress: 0 }]); // Initialize habit with progress = 0
   };
 
   return (
@@ -65,6 +65,5 @@ const App = () => {
     </div>
   );
 };
-
 
 export default App;
