@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Plant from './PlantGrowth.js';
 
 // function App() {
 //   return (
@@ -34,6 +35,13 @@ function App() {
       <button className="mt-4 px-6 py-2 bg-green-500 text-white rounded hover:bg-green-600">
         Add New Habit
       </button>
+      <Plant stage="day1" />
+      <Plant stage="day2" />
+      <Plant stage="day3" />
+      <Plant stage="day4" />
+      <Plant stage="day5" />
+      <Plant stage="day6" />
+      <Plant stage="day7" />
     </div>
   );
 }
