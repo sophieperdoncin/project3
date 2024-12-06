@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Plant from './PlantGrowth.js';
+import Flower from './FlowerGrowth.js';
 import React, {useState} from 'react';
 import HabitInput from './components/habitInput.js';
 import Garden from './components/garden.js';
+import Tree from './TreeGrowth.js';
 
 
 // function App() {
@@ -39,13 +40,13 @@ import Garden from './components/garden.js';
 //       <button className="mt-4 px-6 py-2 bg-green-500 text-white rounded hover:bg-green-600">
 //         Add New Habit
 //       </button>
-//       <Plant stage="day1" />
-//       <Plant stage="day2" />
-//       <Plant stage="day3" />
-//       <Plant stage="day4" />
-//       <Plant stage="day5" />
-//       <Plant stage="day6" />
-//       <Plant stage="day7" />
+//       <Tree stage="day1" />
+//       <Tree stage="day2" />
+//       <Tree stage="day3" />
+//       <Tree stage="day4" />
+//       <Tree stage="day5" />
+//       <Tree stage="day6" />
+//       <Tree stage="day7" />
 //     </div>
 //   );
 // }
@@ -58,11 +59,18 @@ const App = () => {
   };
 
   return (
+    <>
+    <div className="min-h-screen bg-green-100 flex flex-col items-center justify-center">
+       <h1 className="text-4xl font-bold text-green-600">
+         Welcome to Habit Garden 🌱
+      </h1>
+    </div>
     <div className="min-h-screen p-4">
       <h1 className="text-4xl font-bold text-center mb-8">Habit Garden</h1>
       <HabitInput onAddHabit={addHabit} />
       <Garden habits={habits} />
     </div>
+    </>
   );
 };
 

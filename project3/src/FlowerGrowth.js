@@ -1,14 +1,14 @@
 import React from 'react';
 
-import stage1 from './images/stage1.png'
-import stage2 from './images/stage2.png'
-import stage3 from './images/stage3.png'
-import stage4 from './images/stage4.png'
-import stage5 from './images/stage5.png'
-import stage6 from './images/stage6.png'
+import stage1 from './images/flowers/stage1.png'
+import stage2 from './images/flowers/stage2.png'
+import stage3 from './images/flowers/stage3.png'
+import stage4 from './images/flowers/stage4.png'
+import stage5 from './images/flowers/stage5.png'
+import stage6 from './images/flowers/stage6.png'
 
 
-const Plant = ({ stage }) => {
+const Flower = ({ stage }) => {
   const stages = {
     day1: stage1,
     day2: stage2,
@@ -33,4 +33,4 @@ const Plant = ({ stage }) => {
   );
 };
 
-export default Plant;
+export default Flower;
