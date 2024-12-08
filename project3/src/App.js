@@ -43,7 +43,7 @@ import Tree from './TreeGrowth.js';
 //       <Tree stage="day1" />
 //       <Tree stage="day2" />
 //       <Tree stage="day3" />
-//       <Tree stage="day4" />
+//       <Tree stage="danpx y4" />
 //       <Tree stage="day5" />
 //       <Tree stage="day6" />
 //       <Tree stage="day7" />
@@ -59,19 +59,23 @@ const App = () => {
   };
 
   return (
-    <>
-    <div className="min-h-screen bg-green-100 flex flex-col items-center justify-center">
-       <h1 className="text-4xl font-bold text-green-600">
-         Welcome to Habit Garden 🌱
+    <div className="min-h-screen bg-gradient-to-b from-green-400 to-green-600 flex flex-col items-center justify-center text-white">
+      {/* Header */}
+      <h1 className="text-5xl font-extrabold text-center mb-8 drop-shadow-lg">
+        🌱 Welcome to Habit Garden 🌱
       </h1>
+
+      {/* Habit Tracker Section */}
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 text-green-800">
+        <h2 className="text-2xl font-bold text-center mb-4">
+          Track Your Habits
+        </h2>
+        <HabitInput onAddHabit={addHabit} />
+        <Garden habits={habits} />
+      </div>
     </div>
-    <div className="min-h-screen p-4">
-      <h1 className="text-4xl font-bold text-center mb-8">Habit Garden</h1>
-      <HabitInput onAddHabit={addHabit} />
-      <Garden habits={habits} />
-    </div>
-    </>
   );
 };
+
 
 export default App;
