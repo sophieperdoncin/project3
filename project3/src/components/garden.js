@@ -4,9 +4,8 @@ import Plant from './plant';
 const Garden = ({ habits }) => {
     const [gardenHistory, setGardenHistory] = useState([]);
   
-    // Define the addToGarden function
     const addToGarden = (habit) => {
-      setGardenHistory([...gardenHistory, habit]); // Add the habit to the garden history
+      setGardenHistory([...gardenHistory, habit]); 
     };
   
     return (
@@ -27,9 +26,9 @@ const Garden = ({ habits }) => {
               >
                 <h4 className="text-lg font-bold">{habit.name}</h4>
                 <img
-                    src={habit.image} // <-- Use the fully grown image
+                    src={habit.image}
                     alt={`${habit.name} Fully Grown`}
-                    className="w-16 h-16 object-contain" // <-- Style the image
+                    className="w-16 h-16 object-contain" 
                 />                {/* <p>🌱 Fully Grown!</p> */}
                 <p>Fully Grown!</p>
               </div>

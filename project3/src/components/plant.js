@@ -16,7 +16,6 @@ import stage6tree from '../images/trees/stage6.png';
 import stage7tree from '../images/trees/stage7.png';
 
 const Plant = ({ habit, addToGarden }) => {
-  // Array of plant growth stage images
   const flowerStages = [
     stage1flower,
     stage2flower,
@@ -38,9 +37,8 @@ const Plant = ({ habit, addToGarden }) => {
   ];
 
   const [progress, setProgress] = useState(habit.progress || 0);
-  const [plantType, setPlantType] = useState('flower'); // Default to flower
+  const [plantType, setPlantType] = useState('flower'); 
 
-  // Determine the image set to use based on plant type
   const plantStages = plantType === 'tree' ? treeStages : flowerStages;
 
   const logProgress = () => {
@@ -51,11 +49,10 @@ const Plant = ({ habit, addToGarden }) => {
       if (addToGarden) {
         const fullPlant = {
           ...habit,
-          image: plantStages[plantStages.length - 1], // <-- Add the final stage image
+          image: plantStages[plantStages.length - 1], 
       };
-        // addToGarden(habit);
         addToGarden(fullPlant);
-        setProgress(0); // Reset progress
+        setProgress(0); 
       } else {
         console.error('addToGarden is not a function!');
       }
@@ -66,7 +63,6 @@ const Plant = ({ habit, addToGarden }) => {
     <div className="flex flex-col items-center p-4 bg-white rounded shadow">
       <h2 className="font-bold">{habit.name}</h2>
 
-      {/* Dropdown for selecting plant type */}
       <select
         value={plantType}
         onChange={(e) => setPlantType(e.target.value)}
@@ -76,13 +72,15 @@ const Plant = ({ habit, addToGarden }) => {
         <option value="tree">Tree</option>
       </select>
 
-      {/* Conditionally render the growth stage image */}
       {progress > 0 && (
-        <img
-          src={plantStages[progress - 1]}
-          alt={`Growth stage ${progress}`}
-          className="w-32 h-32"
-        />
+          <div className="flex flex-col items-center">
+          <img
+            src={plantStages[progress - 1]}
+            alt={`Growth stage ${progress}`}
+            className="w-32 h-32"
+          />
+          <p className="mt-2 text-sm text-gray-600">Day {progress}</p> 
+        </div>
       )}
 
       <button
