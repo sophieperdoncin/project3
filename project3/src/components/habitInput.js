@@ -21,14 +21,6 @@ const HabitInput = ({ onAddHabit }) => {
         onChange={(e) => setHabitName(e.target.value)}
         className="p-2 border rounded text-black"
       />
-      <select
-        value={plantType}
-        onChange={(e) => setPlantType(e.target.value)}
-        className="p-2 border rounded text-black"
-      >
-        <option value="flower">Flower</option>
-        <option value="tree">Tree</option>
-      </select>
       <button
         type="submit"
         className="bg-white text-gardenGreen px-4 py-2 rounded"
