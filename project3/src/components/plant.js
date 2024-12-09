@@ -49,7 +49,12 @@ const Plant = ({ habit, addToGarden }) => {
     } else {
       console.log('Plant fully grown, adding to garden:', habit);
       if (addToGarden) {
-        addToGarden(habit);
+        const fullPlant = {
+          ...habit,
+          image: plantStages[plantStages.length - 1], // <-- Add the final stage image
+      };
+        // addToGarden(habit);
+        addToGarden(fullPlant);
         setProgress(0); // Reset progress
       } else {
         console.error('addToGarden is not a function!');

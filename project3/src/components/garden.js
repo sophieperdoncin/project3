@@ -26,7 +26,12 @@ const Garden = ({ habits }) => {
                 className="flex flex-col items-center bg-gray-100 p-4 rounded shadow-md"
               >
                 <h4 className="text-lg font-bold">{habit.name}</h4>
-                <p>🌱 Fully Grown!</p>
+                <img
+                    src={habit.image} // <-- Use the fully grown image
+                    alt={`${habit.name} Fully Grown`}
+                    className="w-16 h-16 object-contain" // <-- Style the image
+                />                {/* <p>🌱 Fully Grown!</p> */}
+                <p>Fully Grown!</p>
               </div>
             ))}
           </div>
