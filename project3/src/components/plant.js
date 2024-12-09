@@ -5,6 +5,7 @@ import stage3 from '../images/flowers/stage3.png';
 import stage4 from '../images/flowers/stage4.png';
 import stage5 from '../images/flowers/stage5.png';
 import stage6 from '../images/flowers/stage6.png';
+import stage7 from '../images/flowers/stage7.png';
 
 const Plant = ({ habit, addToGarden }) => {
   // Array of plant growth stage images
@@ -15,6 +16,7 @@ const Plant = ({ habit, addToGarden }) => {
     stage4,
     stage5,
     stage6,
+    stage7,
   ];
 
   const [progress, setProgress] = useState(habit.progress);
