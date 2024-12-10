@@ -29,7 +29,7 @@ const Garden = ({ habits }) => {
                     src={habit.image}
                     alt={`${habit.name} Fully Grown`}
                     className="w-16 h-16 object-contain" 
-                />                {/* <p>🌱 Fully Grown!</p> */}
+                />
                 <p>Fully Grown!</p>
               </div>
             ))}
