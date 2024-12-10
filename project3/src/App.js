@@ -1,10 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
-import Flower from './FlowerGrowth.js';
 import React, {useState} from 'react';
 import HabitInput from './components/habitInput.js';
 import Garden from './components/garden.js';
-import Tree from './TreeGrowth.js';
 
 
 const App = () => {

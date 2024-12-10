@@ -36,10 +36,15 @@ const Plant = ({ habit, addToGarden }) => {
     stage7tree,
   ];
 
-  const [progress, setProgress] = useState(habit.progress || 0);
+  const [progress, setProgress] = useState(habit.progress);
   const [plantType, setPlantType] = useState('flower'); 
 
-  const plantStages = plantType === 'tree' ? treeStages : flowerStages;
+  let plantStages;
+  if (plantType === 'tree'){
+    plantStages = treeStages;
+  } else {
+    plantStages = flowerStages;
+  }
 
   const logProgress = () => {
     if (progress < plantStages.length) {
@@ -54,7 +59,7 @@ const Plant = ({ habit, addToGarden }) => {
         addToGarden(fullPlant);
         setProgress(0); 
       } else {
-        console.error('addToGarden is not a function!');
+        console.error('addToGarden is not a function');
       }
     }
   };
